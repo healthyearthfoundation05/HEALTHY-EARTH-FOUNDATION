@@ -50,6 +50,13 @@
     }
   }
 
+
+  /* Footer Contact column — consistent alignment */
+  .ft-col ul li { text-align: left }
+  .ft-col ul li a { text-align: left; display: block }
+  .ft-col ul a.ft-email { color: rgba(255,255,255,.4); font-size: .78rem; font-weight: 300 }
+  .ft-col ul a.ft-email:hover { color: #fff }
+
 </style>
   <!-- Performance hints -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1264,9 +1271,9 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
       <p class="cf-sub">We read every message and respond within 48 hours.</p>
       <form id="cfForm" onsubmit="submitCF(event)">
         <div class="cf-grid">
-          <div><label class="cf-label">Your Name *</label><input class="cf-input" type="text" name="uname" placeholder="e.g. Priya Sharma" required></div>
+          <div><label class="cf-label">Your Name *</label><input class="cf-input" type="text" name="uname" placeholder="e.g. Ratan Tata" required></div>
           <div><label class="cf-label">Email Address *</label><input class="cf-input" type="email" name="uemail" placeholder="your@email.com" required></div>
-          <div><label class="cf-label">Phone Number</label><input class="cf-input" type="tel" name="uphone" placeholder="+91 80068 00347"></div>
+          <div><label class="cf-label">Phone Number</label><input class="cf-input" type="tel" name="uphone" placeholder="+91 XXXXX XXXXX"></div>
           <div><label class="cf-label">I want to</label>
             <select class="cf-select" name="upurpose">
               <option value="Donation">Make a Donation</option>
@@ -1306,7 +1313,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
       <li><a href="#focus" onclick="event.preventDefault();document.getElementById('focus')&&document.getElementById('focus').scrollIntoView({behavior:'smooth'})">Sanitation &amp; Hygiene</a></li>
     </ul></div>
     <div class="ft-col"><h5>Contact Us</h5><ul>
-      <li><a href="mailto:healthyearthfoundation.india@gmail.com" class="ft-email">&#x2709; Email Us</a></li>
+      <li><a href="mailto:healthyearthfoundation.india@gmail.com" class="ft-email" style="color:rgba(255,255,255,.4);font-size:.78rem;font-weight:300">Email Us</a></li>
       <li><a href="#contact" onclick="event.preventDefault();document.getElementById('contact')&&document.getElementById('contact').scrollIntoView({behavior:'smooth'})" onclick="openModal()">Donate</a></li>
       <li><a href="#contact" onclick="event.preventDefault();document.getElementById('contact')&&document.getElementById('contact').scrollIntoView({behavior:'smooth'})" onclick="openModal()">Volunteer</a></li>
       <li><a href="#contact" onclick="event.preventDefault();document.getElementById('contact')&&document.getElementById('contact').scrollIntoView({behavior:'smooth'})" onclick="openModal()">Partner With Us</a></li>
@@ -1388,13 +1395,25 @@ window.addEventListener('scroll',()=>{
 function submitCF(e){
   e.preventDefault();
   const f=e.target;
-  const n=f.uname.value, em=f.uemail.value, ph=f.uphone.value;
-  const pu=f.upurpose.value, ms=f.umsg.value;
-  const sub=encodeURIComponent('HEF Inquiry: '+pu);
-  const bod=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\nPhone: '+ph+'\nPurpose: '+pu+'\n\nMessage:\n'+ms);
-  window.open('mailto:healthyearthfoundation.india@gmail.com'+sub+'&body='+bod,'_self');
+  const n=f.uname.value.trim();
+  const em=f.uemail.value.trim();
+  const ph=f.uphone.value.trim()||'Not provided';
+  const pu=f.upurpose.value;
+  const ms=f.umsg.value.trim();
+  if(!n||!em||!ms){alert('Please fill in your name, email and message.');return;}
+  const sub=encodeURIComponent('HEF Website Inquiry: '+pu);
+  const bod=encodeURIComponent(
+    'Name: '+n+
+    '\nEmail: '+em+
+    '\nPhone: '+ph+
+    '\nPurpose: '+pu+
+    '\n\nMessage:\n'+ms+
+    '\n\n---\nSent from Healthy Earth Foundation website'
+  );
+  const mailto='mailto:healthyearthfoundation.india@gmail.com?subject='+sub+'&body='+bod;
+  window.location.href=mailto;
   document.getElementById('cfOk').style.display='block';
-  setTimeout(()=>{f.reset();},500);
+  setTimeout(()=>{f.reset();document.getElementById('cfOk').style.display='none';},4000);
 }
 
 // Burger menu keyboard accessibility
