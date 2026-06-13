@@ -57,6 +57,109 @@
   .ft-col ul a.ft-email { color: rgba(255,255,255,.4); font-size: .78rem; font-weight: 300 }
   .ft-col ul a.ft-email:hover { color: #fff }
 
+
+  /* ══ HERO TYPOGRAPHY — correct visual hierarchy ══ */
+
+  /* Tagline — small, elegant, whisper above the title */
+  .hero-tagline-line {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(.65rem, 1vw, .78rem);
+    font-weight: 400;
+    color: rgba(255,255,255,.55);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: clamp(10px, 1.5vw, 16px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.4;
+  }
+  .hero-tagline-line::before { display: none }
+
+  /* Title — the DOMINANT element, large and commanding */
+  .hero-title-main {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: clamp(3rem, 7.5vw, 7rem);
+    font-weight: 700;
+    line-height: 1.0;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: clamp(16px, 2.5vw, 28px);
+  }
+  .hero-title-main span {
+    color: #D99A20;
+    display: block;
+  }
+
+  /* Description — medium, comfortable, not competing */
+  .hero-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(.8rem, 1.2vw, .95rem);
+    font-weight: 300;
+    color: rgba(255,255,255,.62);
+    line-height: 1.85;
+    margin-bottom: clamp(20px, 3vw, 32px);
+    max-width: 48ch;
+  }
+
+  /* Buttons — SMALL, refined, secondary to the title */
+  .hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .hero-btn-primary {
+    background: linear-gradient(135deg, #B8760A, #D99A20);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 3px;
+    font-family: 'Outfit', sans-serif;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: 0 3px 14px rgba(184,118,10,.35);
+    white-space: nowrap;
+  }
+  .hero-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(184,118,10,.5);
+    background: linear-gradient(135deg, #CF8A14, #E8AA30);
+  }
+  .hero-btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,.7);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 10px 22px;
+    border-radius: 3px;
+    font-family: 'Outfit', sans-serif;
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: all .3s;
+    white-space: nowrap;
+  }
+  .hero-btn-secondary:hover {
+    border-color: rgba(255,255,255,.7);
+    color: #fff;
+    background: rgba(255,255,255,.06);
+  }
+
+  /* Responsive hero left */
+  @media(max-width:850px){
+    .hero-title-main { font-size: clamp(2.6rem, 9vw, 4rem); letter-spacing: -.5px }
+    .hero-desc { max-width: 100%; font-size: clamp(.8rem, 3vw, .92rem) }
+    .hero-tagline-line { font-size: clamp(.6rem, 2vw, .72rem) }
+  }
+  @media(max-width:480px){
+    .hero-title-main { font-size: clamp(2.4rem, 11vw, 3.2rem) }
+  }
+
 </style>
   <!-- Performance hints -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,30 +788,11 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
   }
   
   .hero-left { display:flex;flex-direction:column;gap:0 }
-  .hero-title-main {
-    font-family:'Libre Baskerville',serif;
-    font-size:clamp(2rem,5.5vw,5rem);
-    font-weight:700;line-height:1.08;
-    color:#fff;letter-spacing:-.5px;
-    margin-bottom:clamp(12px,2vw,18px);
-  }
-  .hero-title-main span { color:var(--gold-lt) }
-  .hero-tagline-line {
-    font-size:clamp(.78rem,1.4vw,.96rem);font-weight:400;
-    color:rgba(255,255,255,.75);line-height:1.5;
-    margin-bottom:clamp(6px,1vw,10px);
-    display:flex;align-items:center;gap:10px;
-  }
-  .hero-tagline-line::before {
-    content:'';width:clamp(18px,2.5vw,28px);height:1.5px;
-    background:var(--gold-lt);flex-shrink:0;
-  }
-  .hero-desc {
-    font-size:clamp(.84rem,1.5vw,1rem);font-weight:300;
-    color:rgba(255,255,255,.68);line-height:1.85;
-    margin:clamp(14px,2.5vw,22px) 0 clamp(24px,4vw,36px);
-    max-width:54ch;
-  }
+  
+  
+  
+  
+  
   
   .hero-right {
     display:flex;align-items:center;justify-content:center;
@@ -751,9 +835,9 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
   @media(max-width:850px){
     .hero-inner { grid-template-columns:1fr; text-align:center }
     .hero-right { display:none }
-    .hero-desc { max-width:100%; margin-left:auto; margin-right:auto }
-    .hero-tagline-line { justify-content:center }
-    .hero-tagline-line::before { display:none }
+    
+    
+    
     .hero-actions { justify-content:center }
   }
 
@@ -955,11 +1039,11 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
     <!-- LEFT: Text -->
     <div class="hero-left">
       <p class="hero-tagline-line">Health &amp; Resilience Through Integrated Transformation</p>
-      <h1 class="hero-title-main">Healthy Earth<br><span>Foundation</span></h1>
-      <p class="hero-desc">Committed to building a healthier, greener, and more empowered rural India through women upliftment, child welfare, village education, sanitation awareness, environmental conservation, and sustainable community development initiatives.</p>
-      <div class="hero-actions" style="display:flex;gap:14px;flex-wrap:wrap">
-        <button class="btn-primary" onclick="openDonate()">Support Our Mission</button>
-        <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn More</button>
+      <h1 class="hero-title-main">Healthy Earth<span>Foundation</span></h1>
+      <p class="hero-desc">Committed to building a healthier, greener, and more empowered rural India &mdash; one village at a time. Through the upliftment of rural women, quality education for children, improved child nutrition, sanitation awareness, tree plantation, wildlife conservation, and sustainable community development, we are working to create communities that are resilient, dignified, and in harmony with their natural environment.</p>
+      <div class="hero-actions">
+        <button class="hero-btn-primary" onclick="openDonate()">Support Our Mission</button>
+        <button class="hero-btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn More</button>
       </div>
     </div>
 
