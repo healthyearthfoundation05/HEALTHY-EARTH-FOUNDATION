@@ -517,6 +517,54 @@
     .burger { display: flex }
   }
 
+
+  /* ══ GLOBAL JUSTIFIED TEXT — MS Word style, all screen sizes ══ */
+  .hero-desc,
+  .sb,
+  .bio,
+  .fbio p,
+  .mv-c p,
+  .moa-c p,
+  .fc p,
+  .wf p,
+  .step-c p,
+  .ci span:last-child,
+  .commit-q blockquote,
+  .pdesc,
+  .ft-desc,
+  .vm-box p,
+  .fquote p,
+  .about-g p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Last line of justified text should not stretch awkwardly */
+  .hero-desc::after,
+  .sb::after,
+  .bio::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  /* Headings, labels, buttons, taglines — NEVER justified */
+  h1, h2, h3, h4, h5,
+  .eyebrow, .hero-tagline-line, .hero-title-main,
+  .nav-name, .nav-links a, .nav-btn,
+  .hero-btn-primary, .hero-btn-secondary,
+  .btn-primary, .btn-secondary,
+  .fc h3, .wf h4, .step-c h4, .mv-c h3, .moa-c h4,
+  .cred-m, .cred-s, .bchip, .tech-tag,
+  cite, .gc-cap, .hstat-lbl, .hstat-num {
+    text-align: inherit;
+  }
+
 </style>
   <!-- Performance hints -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
