@@ -574,6 +574,25 @@
  text-align: inherit;
  }
 
+
+  /* ══ FINAL FIX: Hero description — no justify, no stretched last line ══ */
+  .hero-desc {
+    text-align: left !important;
+    text-justify: auto !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+  .hero-desc::after { display: none !important; content: none !important }
+
+  /* ══ FINAL FIX: Centre the Mission & Vision (and similar) grid ══ */
+  .mv-g, .moa-g {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
 </style>
  <!-- Performance hints -->
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
