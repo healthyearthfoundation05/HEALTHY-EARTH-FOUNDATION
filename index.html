@@ -67,12 +67,13 @@
  /* Tagline — small, elegant, whisper above the title */
  .hero-tagline-line {
  font-family: 'Outfit', sans-serif;
- font-size: clamp(.65rem, 1vw, .78rem);
+ font-style: italic;
+ font-size: clamp(.82rem, 1.4vw, 1.05rem);
  font-weight: 400;
- color: rgba(255,255,255,.55);
- letter-spacing: 2.5px;
+ color: rgba(255,255,255,.62);
+ letter-spacing: 2px;
  text-transform: uppercase;
- margin-bottom: clamp(10px, 1.5vw, 16px);
+ margin: 0 0 clamp(12px, 1.8vw, 18px) clamp(12px, 3vw, 40px);
  display: flex;
  align-items: center;
  gap: 10px;
@@ -239,13 +240,7 @@
  .burger span { width: 22px; height: 1.5px; background: #1C1C18; display: block }
 
  /* Collapse to hamburger below 900px */
- @media(max-width:900px){
- .nav-links, 
- .burger { display: flex }
- }
-
-
- /* ── MOBILE JUSTIFIED TEXT ── */
+  /* ── MOBILE JUSTIFIED TEXT ── */
  @media(max-width: 768px) {
  /* Body copy — justify all paragraph text */
  p, .sb, .bio, .hero-desc, .sec-body, .mv-c p,
@@ -383,7 +378,9 @@
  .wf { background: #ffffff !important; border-color: #E8E4DA !important }
 
  /* vm-box warm white */
- .vm-box { background: #ffffff !important }
+ .vm-box { background: #ffffff !important; padding: clamp(22px,3vw,32px) clamp(22px,3vw,34px) !important }
+  .vm-box h4 { font-size: clamp(1rem,1.6vw,1.15rem) !important; margin-bottom: 10px !important }
+  .vm-box p { font-size: clamp(.88rem,1.4vw,1rem) !important; line-height: 1.85 !important }
 
  /* About section text — stronger contrast */
  .about-sec .sb, .about-sec p {
@@ -685,7 +682,7 @@ h2.sh-w{color:#fff}
 .abadge{position:absolute;bottom:0;left:0;background:var(--green);color:#fff;padding:16px 22px;font-family:'Libre Baskerville',serif}
 .ab-big{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;display:block;line-height:1}
 .ab-sm{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;font-family:'Outfit',sans-serif;font-weight:600;opacity:.8}
-.vm-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.vm-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
 .vm-box{background:#fff;border:1px solid var(--border);border-radius:4px;padding:20px;border-top:3px solid var(--green)}
 .vm-box:hover{box-shadow:0 6px 20px rgba(0,0,0,.07);transform:translateY(-2px)}
 .vm-box{transition:all .25s}
@@ -774,8 +771,9 @@ h2.sh-w{color:#fff}
 .wf p{font-size:clamp(.72rem,1.1vw,.78rem);color:var(--text-soft);line-height:1.68;font-weight:300}
 
 .approach-sec{background:#fff}
-.steps-r{display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(180px,22vw,260px),1fr));gap:clamp(16px,2.5vw,24px);margin-top:clamp(36px,5vw,52px);position:relative}
-.steps-r::before{content:'';position:absolute;top:clamp(27px,4vw,34px);left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--green),var(--green-lt),var(--green),transparent);opacity:.3}
+.steps-r{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(16px,2.5vw,24px);margin-top:clamp(36px,5vw,52px);position:relative}
+.step-c{flex:0 1 260px;min-width:200px;max-width:300px}
+.steps-r::before{display:none}
 .step-c{text-align:center;padding:0 8px}
 .step-n{width:clamp(54px,7vw,68px);height:clamp(54px,7vw,68px);border-radius:50%;background:var(--green);color:var(--gold-lt);font-family:'Libre Baskerville',serif;font-size:clamp(1.2rem,2vw,1.5rem);font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto clamp(16px,2.5vw,20px);position:relative;z-index:1;box-shadow:0 4px 16px rgba(27,94,59,.3)}
 .step-c h4{font-family:'Libre Baskerville',serif;font-size:clamp(.9rem,1.4vw,1rem);font-weight:700;color:var(--text);margin-bottom:8px}
@@ -857,7 +855,6 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  .founder-portrait{position:static}
 }
 @media(max-width:700px){
- .nav-links,.burger{display:flex}
  .ft-g{grid-template-columns:1fr}
  
  .hero-actions,.cta-btns{flex-direction:column;align-items:flex-start}
@@ -1192,13 +1189,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  
  
  
- @media(max-width:900px){
- .nav-links, 
- .burger { display: flex }
- }
-
-
- 
+  
  .hero { min-height:100svh; padding-top:var(--nav-h); display:flex; flex-direction:column; position:relative; overflow:hidden }
  .hero-bg-grad {
  position:absolute;inset:0;z-index:0;
@@ -1543,7 +1534,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 <section class="sec about-sec" id="about">
  <div class="wrap">
  <div class="about-g">
- <div class="rev" style="text-align:center;max-width:900px;margin:0 auto">
+ <div class="rev" style="text-align:center;max-width:1200px;margin:0 auto">
  <span class="eyebrow eyebrow-c">About Us</span>
  <h2 class="sh" style="text-align:center;margin-bottom:20px">A Foundation Rooted in Rural India</h2>
  <p class="sb" style="text-align:center;margin:0 auto 18px">Healthy Earth Foundation was built on the belief that meaningful change does not begin in boardrooms, it begins in villages, in families, and in communities striving for a better future. Across rural India, countless children still lack access to quality education and nutrition, women continue to face barriers to opportunity, and environmental degradation threatens both livelihoods and biodiversity. We exist to change that reality.</p>
@@ -1558,7 +1549,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <p style="font-family:'Libre Baskerville',serif;font-size:clamp(.78rem,1.4vw,.92rem);font-style:italic;color:rgba(240,228,200,.92);margin:0">Rajkiya Vidyalaya, Paschimi Uttar Pradesh, where meaningful change begins</p>
  </div>
  </div>
- <div class="vm-pair" style="max-width:700px;margin:0 auto;text-align:left">
+ <div class="vm-pair" style="max-width:1000px;margin:0 auto;text-align:left">
  <div class="vm-box"><h4>🌿 Our Purpose</h4><p>Empowering communities, educating children, uplifting women, and protecting the environment, one village at a time.</p></div>
  <div class="vm-box"><h4>🗺️ Our Reach</h4><p>Rooted in villages of Western Uttar Pradesh, scaling an integrated rural development model nationally.</p></div>
  </div>
@@ -1635,9 +1626,9 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <p class="sb rev" style="margin:0 auto;max-width:640px">A dedicated group of volunteers, field workers, and social enthusiasts who leave no stone unturned in their pursuit of meaningful rural change.</p>
  </div>
 
- <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(200px,25vw,260px),1fr));gap:clamp(14px,2vw,20px);max-width:1100px;margin:0 auto;justify-items:center;text-align:center">
+ <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,2vw,20px);max-width:1100px;margin:0 auto;text-align:center">
  <!-- Team card 1 -->
- <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid var(--green);transition:transform .3s,box-shadow .3s" class="rev"
+ <div style="flex:0 1 260px;min-width:220px;max-width:280px;background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid var(--green);transition:transform .3s,box-shadow .3s" class="rev"
  onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)'" style="text-align:center"
  onmouseout="this.style.transform='';this.style.boxShadow=''">
  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green-lt));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 12px">👩</div>
@@ -1646,7 +1637,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <p style="font-size:.78rem;color:var(--text-md);line-height:1.72;font-weight:300">Women from within the communities who lead our programmes on the ground, building trust and ensuring lasting impact.</p>
  </div>
  <!-- Team card 2 -->
- <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid #B8760A;transition:transform .3s,box-shadow .3s" class="rev"
+ <div style="flex:0 1 260px;min-width:220px;max-width:280px;background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid #B8760A;transition:transform .3s,box-shadow .3s" class="rev"
  onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)'" style="text-align:center"
  onmouseout="this.style.transform='';this.style.boxShadow=''">
  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 12px">🎓</div>
@@ -1655,7 +1646,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <p style="font-size:.78rem;color:var(--text-md);line-height:1.72;font-weight:300">Young researchers and students from CSIR-NEERI and partner institutions contributing expertise, energy, and innovation.</p>
  </div>
  <!-- Team card 3 -->
- <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid #4CAF79;transition:transform .3s,box-shadow .3s" class="rev"
+ <div style="flex:0 1 260px;min-width:220px;max-width:280px;background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid #4CAF79;transition:transform .3s,box-shadow .3s" class="rev"
  onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)'" style="text-align:center"
  onmouseout="this.style.transform='';this.style.boxShadow=''">
  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#4CAF79,#2D7A52);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 12px">🌱</div>
@@ -1664,7 +1655,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <p style="font-size:.78rem;color:var(--text-md);line-height:1.72;font-weight:300">Passionate volunteers leading tree plantation drives, wildlife awareness camps, and environmental education in village schools.</p>
  </div>
  <!-- Team card 4 -->
- <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid #E91E8C;transition:transform .3s,box-shadow .3s" class="rev"
+ <div style="flex:0 1 260px;min-width:220px;max-width:280px;background:#fff;border:1px solid var(--border);border-radius:6px;padding:clamp(18px,2.5vw,26px);text-align:center;border-top:3px solid #E91E8C;transition:transform .3s,box-shadow .3s" class="rev"
  onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)'" style="text-align:center"
  onmouseout="this.style.transform='';this.style.boxShadow=''">
  <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#E91E8C,#C2185B);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 12px">👧</div>
