@@ -16,95 +16,85 @@
 <meta name="description" content="Community initiatives and milestones from Healthy Earth Foundation's grassroots programs: plantation drives, hygiene awareness, skill development, and clean energy campaigns in Western Uttar Pradesh.">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --forest:      #1A5C38;
-  --forest-deep: #0F3D26;
-  --forest-mid:  #247A4A;
-  --forest-pale: #EAF5EE;
-  --gold:        #B8760A;
-  --gold-warm:   #D99A20;
-  --gold-pale:   #FBF0D9;
-  --soil:        #6B4226;
-  --water:       #2E6B8A;
-  --parchment:   #F6F2E8;
-  --paper:       #FCFAF4;
-  --paper-line:  #DFD8C6;
-  --ink:         #211D16;
-  --ink-soft:    #5C5546;
-  --ink-faint:   #8C8473;
-  --nav-h:       76px;
+  --green:      #1A5C38;
+  --green-mid:  #247A4A;
+  --green-lt:   #3A9E65;
+  --green-pale: #EAF5EE;
+  --gold:       #B8760A;
+  --gold-lt:    #D99A20;
+  --gold-pale:  #FDF3DC;
+  --cream:      #FAFAF6;
+  --grey:       #F3F3EF;
+  --border:     #E4E4DC;
+  --parch:      #F8F6F0;
+  --text:       #1A1A16;
+  --text-md:    #2E2E28;
+  --text-soft:  #5A5A50;
+  --nav-h:      76px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Outfit',sans-serif;color:var(--ink-soft);background:var(--paper);overflow-x:hidden;line-height:1.7;
-  background-image:radial-gradient(var(--paper-line) 0.6px, transparent 0.6px);
-  background-size:22px 22px; background-attachment:fixed;
-}
-h1,h2,h3,h4{font-family:'Libre Baskerville',Georgia,serif;color:var(--ink);font-weight:700}
+body{font-family:'Outfit',sans-serif;color:#1a1a1a;background:#fff;overflow-x:hidden;line-height:1.7}
 a{text-decoration:none}
 img{max-width:100%;display:block}
-.mono{font-family:'JetBrains Mono',monospace}
 
-.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:8px;margin-bottom:14px}
-.eyebrow::before{content:'';width:16px;height:1px;background:var(--gold)}
-
-.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,64px);background:rgba(252,250,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--paper-line)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,64px);background:rgba(255,255,255,1);border-bottom:1px solid #E4E4DC}
 .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo-img{width:clamp(42px,5vw,52px);height:clamp(42px,5vw,52px);border-radius:50%;object-fit:cover}
-.nav-name{font-family:'Libre Baskerville',serif;font-weight:700;font-size:.92rem;color:var(--ink)}
-.nav-since{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--ink-faint);letter-spacing:1px;text-transform:uppercase}
-.nav-links{display:flex;list-style:none;gap:clamp(16px,2.5vw,34px);align-items:center}
-.nav-links a{color:var(--ink-soft);font-size:.83rem;font-weight:500;transition:color .2s;position:relative}
-.nav-links a:hover,.nav-links a.active{color:var(--forest)}
-.nav-links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-20px;height:2px;background:var(--gold)}
-.nav-btn{background:var(--forest);color:#fff;border:none;padding:11px 24px;border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:background .2s}
-.nav-btn:hover{background:var(--forest-deep)}
-@media(max-width:860px){.nav-links{display:none}}
+.nav-logo-img{width:clamp(48px,5.5vw,62px);height:clamp(48px,5.5vw,62px);border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(26,92,56,.12);box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.nav-name{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(1rem,1.4vw,1.2rem);font-weight:700;color:#1A5C38;line-height:1.2;white-space:nowrap}
+.nav-since{font-size:.68rem;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.nav-links{display:flex;list-style:none;gap:clamp(14px,2.2vw,30px);align-items:center}
+.nav-links a{color:var(--text-md);font-size:.85rem;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--green)}
+.nav-btn{background:linear-gradient(135deg,#B8760A,#D99A20);color:#fff;border:none;padding:11px 26px;border-radius:4px;font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(184,118,10,.4)}
+@media(max-width:900px){.nav-links{display:none}}
 
-.page-hero{margin-top:var(--nav-h);background:var(--forest-deep);position:relative;padding:clamp(60px,9vw,100px) clamp(20px,4vw,64px);text-align:left;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px}
-.page-hero-inner{max-width:1080px;margin:0 auto;position:relative}
-.page-hero .eyebrow{color:var(--gold-warm)}
-.page-hero .eyebrow::before{background:var(--gold-warm)}
-.page-hero h1{color:#fff;font-size:clamp(2rem,4.5vw,3.4rem);margin-bottom:16px;max-width:640px}
-.page-hero p{color:rgba(255,255,255,.78);font-size:clamp(.95rem,1.5vw,1.15rem);max-width:560px}
+.page-hero{margin-top:var(--nav-h);background:linear-gradient(135deg,var(--green),var(--green-mid));padding:clamp(56px,8vw,96px) clamp(20px,4vw,64px);text-align:center}
+.page-hero-inner{max-width:900px;margin:0 auto}
+.page-hero .eyebrow{color:var(--gold-lt);justify-content:center}
+.page-hero .eyebrow::before{background:var(--gold-lt)}
+.page-hero h1{font-family:'Libre Baskerville',serif;color:#fff;font-size:clamp(1.9rem,4.2vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:16px}
+.page-hero p{color:rgba(255,255,255,.8);font-size:clamp(.95rem,1.5vw,1.1rem);max-width:600px;margin:0 auto}
 
-.container{max-width:1080px;margin:0 auto;padding:clamp(50px,7vw,90px) clamp(20px,4vw,64px)}
-.section-title{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:20px}
-.lead{font-size:1.05rem;color:var(--ink-soft);max-width:720px;margin-bottom:36px}
+.sec{padding:clamp(56px,7vw,96px) clamp(20px,5vw,80px)}
+.wrap{max-width:1080px;margin:0 auto}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--green);display:inline-block;flex-shrink:0}
+h2.sh{font-family:'Libre Baskerville',serif;font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:16px}
+.sb{font-size:clamp(.9rem,1.3vw,1rem);font-weight:300;line-height:1.9;color:var(--text-md);margin-top:16px;max-width:68ch}
 
-.rule{border:none;border-top:1px dashed var(--paper-line);margin:50px 0}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin-top:32px}
+.card{background:var(--parch);border:1px solid var(--border);border-radius:8px;padding:28px}
+.card h3{font-family:'Libre Baskerville',serif;font-size:1.1rem;margin-bottom:10px;color:var(--green)}
+.card p{font-size:.9rem;color:var(--text-soft);font-weight:300;line-height:1.8}
+.card .tag{display:inline-block;background:var(--gold-pale);color:var(--gold);font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:12px}
 
-.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:30px}
-.card{background:var(--paper);border:1px solid var(--paper-line);border-radius:3px;padding:26px;position:relative;box-shadow:0 1px 0 var(--paper-line)}
-.card::before{content:'';position:absolute;top:12px;right:12px;width:5px;height:5px;border-radius:50%;background:var(--paper-line)}
-.card h3{font-size:1.08rem;margin-bottom:10px;color:var(--forest)}
-.card p{font-size:.9rem;color:var(--ink-soft)}
-.card .tag{display:inline-block;font-family:'JetBrains Mono',monospace;background:var(--gold-pale);color:var(--gold);font-size:.66rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 9px;border-radius:2px;margin-bottom:12px}
+.btn-primary{display:inline-block;background:linear-gradient(135deg,#B8760A,#D99A20);color:#fff;border:none;padding:clamp(13px,2vw,16px) clamp(28px,3.5vw,40px);border-radius:4px;font-family:'Outfit',sans-serif;font-size:clamp(.8rem,1.3vw,.9rem);font-weight:600;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(184,118,10,.4)}
+.btn-outline{display:inline-block;background:transparent;color:var(--green);border:1.5px solid var(--green);padding:clamp(11px,1.8vw,14px) clamp(26px,3vw,38px);border-radius:4px;font-family:'Outfit',sans-serif;font-size:clamp(.8rem,1.3vw,.9rem);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
 
-.btn-primary{display:inline-block;background:var(--gold);color:#fff;border:none;padding:14px 34px;border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:.76rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:background .2s}
-.btn-primary:hover{background:var(--gold-warm)}
-.btn-outline{display:inline-block;background:transparent;color:var(--forest);border:1.5px solid var(--forest);padding:12.5px 32px;border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:.76rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+hr.rule{border:none;border-top:1px solid var(--border);margin:48px 0}
 
-footer{background:var(--forest-deep);color:rgba(255,255,255,.65);padding:60px clamp(20px,4vw,64px) 30px}
+footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clamp(20px,3vw,28px);border-top:3px solid #B8760A;color:rgba(255,255,255,.65)}
 .ft-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1080px;margin:0 auto}
 .ft-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.ft-logo img{width:42px;height:42px;border-radius:50%}
+.ft-logo img{width:44px;height:44px;border-radius:50%}
 .ft-name{color:#fff;font-family:'Libre Baskerville',serif;font-weight:700}
-.ft-desc{font-size:.84rem;line-height:1.7;max-width:320px}
-.ft-col h5{color:#fff;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.ft-sub{font-size:.72rem;color:var(--gold-lt)}
+.ft-desc{font-size:.84rem;line-height:1.7;max-width:320px;font-weight:300}
+.ft-col h5{color:#fff;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
 .ft-col ul{list-style:none}
 .ft-col li{margin-bottom:10px}
 .ft-col a{color:rgba(255,255,255,.6);font-size:.84rem}
-.ft-bottom{max-width:1080px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;font-family:'JetBrains Mono',monospace}
+.ft-bottom{max-width:1080px;margin:36px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem}
 @media(max-width:760px){.ft-g{grid-template-columns:1fr}}
 
-.update-card{padding:30px 0;border-bottom:1px dashed var(--paper-line)}
+.update-card{padding:28px 0;border-bottom:1px solid var(--border)}
 .update-card:last-of-type{border-bottom:none}
-.update-card h3{font-size:1.15rem;margin-bottom:10px;color:var(--forest)}
-.update-card p{font-size:.92rem;color:var(--ink-soft);max-width:680px}
-.photo-note{background:var(--gold-pale);border:1px dashed var(--gold);border-radius:3px;padding:16px 20px;margin-top:30px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--soil)}
+.update-card h3{font-family:'Libre Baskerville',serif;font-size:1.15rem;margin-bottom:10px;color:var(--green)}
+.update-card p{font-size:.92rem;color:var(--text-md);font-weight:300;line-height:1.8;max-width:680px}
+.photo-note{background:var(--gold-pale);border:1px dashed var(--gold);border-radius:6px;padding:16px 20px;margin-top:30px;font-size:.85rem;color:var(--text-md)}
 </style>
 </head>
 <body>
@@ -114,7 +104,7 @@ footer{background:var(--forest-deep);color:rgba(255,255,255,.65);padding:60px cl
   <img class="nav-logo-img logo-img" alt="Healthy Earth Foundation Logo">
   <div>
    <div class="nav-name">Healthy Earth Foundation</div>
-   <div class="nav-since">Field Reports &middot; Western UP</div>
+   <div class="nav-since">For Rural India</div>
   </div>
  </a>
  <ul class="nav-links">
@@ -122,24 +112,25 @@ footer{background:var(--forest-deep);color:rgba(255,255,255,.65);padding:60px cl
   <li><a href="about.html" >About</a></li>
   <li><a href="programs.html" >Programs</a></li>
   <li><a href="impact.html" class="active">Impact</a></li>
-  <li><a href="donate.html" >Donate</a></li>
+  <li><a href="index.html#partners">Partners</a></li>
   <li><a href="index.html#contact">Contact</a></li>
  </ul>
- <button class="nav-btn" onclick="window.location.href='donate.html'">Donate</button>
+ <button class="nav-btn" onclick="window.location.href='donate.html'">Donate Now</button>
 </nav>
 
 
 <div class="page-hero">
  <div class="page-hero-inner">
-  <div class="eyebrow">Our Impact</div>
+  <span class="eyebrow">Our Impact</span>
   <h1>Real work, told honestly.</h1>
   <p>As our programs grow, this is where we'll keep an honest record of what we've actually done together with the villages we work in.</p>
  </div>
 </div>
 
-<div class="container">
- <div class="eyebrow">Community Initiatives &amp; Milestones</div>
- <p class="lead">Every entry here reflects something we did with a community, not just for one. That distinction matters to us.</p>
+<section class="sec">
+ <div class="wrap">
+ <span class="eyebrow">Community Initiatives &amp; Milestones</span>
+ <p class="sb">Every entry here reflects something we did with a community, not just for one. That distinction matters to us.</p>
 
  <div class="update-card">
   <h3>Plantation Drive: Hasanpur Kalan Village</h3>
@@ -165,10 +156,11 @@ footer{background:var(--forest-deep);color:rgba(255,255,255,.65);padding:60px cl
   &#128247; Photos from these initiatives will be added here soon.
  </div>
 
- <div style="margin-top:60px">
+ <div style="margin-top:50px">
   <a href="donate.html" class="btn-primary">Support Our Work</a>
  </div>
-</div>
+ </div>
+</section>
 
 
 <footer>
@@ -176,30 +168,33 @@ footer{background:var(--forest-deep);color:rgba(255,255,255,.65);padding:60px cl
   <div>
    <div class="ft-brand">
     <div class="ft-logo"><img class="logo-img" alt="HEF"></div>
-    <div><div class="ft-name">Healthy Earth Foundation</div></div>
+    <div><div class="ft-name">Healthy Earth Foundation</div><div class="ft-sub">Committed to Rural India &middot; Non-Profit</div></div>
    </div>
-   <p class="ft-desc">A non-profit committed to rural women's upliftment, child welfare, girl child education, and environmental conservation across Western Uttar Pradesh, India.</p>
+   <p class="ft-desc">A non-profit committed to rural women's upliftment, child welfare, girl child education, environmental conservation, and sustainable community development across rural India.</p>
   </div>
-  <div class="ft-col"><h5>Explore</h5><ul>
-   <li><a href="about.html">Our Story</a></li>
+  <div class="ft-col"><h5>Quick Links</h5><ul>
+   <li><a href="about.html">About Us</a></li>
    <li><a href="programs.html">Programs</a></li>
    <li><a href="impact.html">Impact</a></li>
    <li><a href="donate.html">Donate</a></li>
   </ul></div>
-  <div class="ft-col"><h5>Programs</h5><ul>
+  <div class="ft-col"><h5>Our Work</h5><ul>
    <li><a href="programs.html#education">Girl Child Education</a></li>
    <li><a href="programs.html#women">Women's Empowerment</a></li>
-   <li><a href="programs.html#environment">Environment</a></li>
-   <li><a href="programs.html#nutrition">Child Nutrition</a></li>
+   <li><a href="programs.html#skills">Skill Development</a></li>
+   <li><a href="programs.html#environment">Tree Plantation</a></li>
+   <li><a href="programs.html#sanitation">Sanitation &amp; Hygiene</a></li>
   </ul></div>
-  <div class="ft-col"><h5>Contact</h5><ul>
+  <div class="ft-col"><h5>Contact Us</h5><ul>
    <li><a href="mailto:healthyearthfoundation.india@gmail.com">Email Us</a></li>
    <li><a href="donate.html">Donate</a></li>
+   <li><a href="index.html#contact">Volunteer</a></li>
+   <li><a href="index.html#contact">Partner With Us</a></li>
   </ul></div>
  </div>
  <div class="ft-bottom">
-  <p>&copy; 2026 Healthy Earth Foundation &middot; Section 8 Company</p>
-  <a style="color:rgba(255,255,255,.6)" href="mailto:healthyearthfoundation.india@gmail.com">healthyearthfoundation.india@gmail.com</a>
+  <p>&copy; 2026 Healthy Earth Foundation &middot; Section 8 Company &middot; All Rights Reserved</p>
+  <a href="mailto:healthyearthfoundation.india@gmail.com" style="color:rgba(255,255,255,.6)">healthyearthfoundation.india@gmail.com</a>
  </div>
 </footer>
 <script>
