@@ -13,7 +13,7 @@
 <link rel="canonical" href="https://healthyearthfoundation.org/impact.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Impact | Healthy Earth Foundation</title>
-<meta name="description" content="Community initiatives and milestones from Healthy Earth Foundation's grassroots programs: plantation drives, hygiene awareness, skill development, and clean energy campaigns in Western Uttar Pradesh.">
+<meta name="description" content="Real initiatives and milestones from Healthy Earth Foundation's work in Western Uttar Pradesh: plantation drives, hygiene programs, skill development, and clean energy campaigns.">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
   --green-lt:   #3A9E65;
   --green-pale: #EAF5EE;
   --gold:       #B8760A;
+  --gold-text:  #8F5C08;
   --gold-lt:    #D99A20;
   --gold-pale:  #FDF3DC;
   --cream:      #FAFAF6;
@@ -50,17 +51,24 @@ img{max-width:100%;display:block}
 .nav-links a:hover,.nav-links a.active{color:var(--green)}
 .nav-btn{background:linear-gradient(135deg,#B8760A,#D99A20);color:#fff;border:none;padding:11px 26px;border-radius:4px;font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(184,118,10,.4)}
 @media(max-width:900px){.nav-links{display:none}}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;flex-shrink:0}
+.burger span{width:22px;height:1.5px;background:#1C1C18;display:block}
+@media(max-width:900px){.burger{display:flex}}
+.mob{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:#fff;padding:20px clamp(20px,4vw,64px) 28px;flex-direction:column;gap:14px;z-index:998;border-bottom:1px solid var(--border);box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.mob.open{display:flex}
+.mob a{color:var(--text-md);text-decoration:none;font-size:1rem;padding:10px 0;border-bottom:1px solid var(--border)}
+.nav.shadow{box-shadow:0 4px 20px rgba(0,0,0,.06)}
 
-.page-hero{margin-top:var(--nav-h);background:linear-gradient(135deg,var(--green),var(--green-mid));padding:clamp(56px,8vw,96px) clamp(20px,4vw,64px);text-align:center}
+.page-hero{margin-top:var(--nav-h);background:linear-gradient(135deg,var(--green),var(--green-mid));padding:clamp(44px,6vw,72px) clamp(20px,4vw,64px);text-align:center}
 .page-hero-inner{max-width:900px;margin:0 auto}
 .page-hero .eyebrow{color:var(--gold-lt);justify-content:center}
 .page-hero .eyebrow::before{background:var(--gold-lt)}
 .page-hero h1{font-family:'Libre Baskerville',serif;color:#fff;font-size:clamp(1.9rem,4.2vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:16px}
 .page-hero p{color:rgba(255,255,255,.8);font-size:clamp(.95rem,1.5vw,1.1rem);max-width:600px;margin:0 auto}
 
-.sec{padding:clamp(56px,7vw,96px) clamp(20px,5vw,80px)}
+.sec{padding:clamp(40px,5vw,72px) clamp(20px,5vw,80px)}
 .wrap{max-width:1080px;margin:0 auto}
-.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green-mid);display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .eyebrow::before{content:'';width:24px;height:2px;background:var(--green);display:inline-block;flex-shrink:0}
 h2.sh{font-family:'Libre Baskerville',serif;font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:16px}
 .sb{font-size:clamp(.9rem,1.3vw,1rem);font-weight:300;line-height:1.9;color:var(--text-md);margin-top:16px;max-width:68ch}
@@ -90,16 +98,16 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 .ft-bottom{max-width:1080px;margin:36px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem}
 @media(max-width:760px){.ft-g{grid-template-columns:1fr}}
 
-.update-card{padding:28px 0;border-bottom:1px solid var(--border)}
+.update-card{padding:26px 0;border-bottom:1px solid var(--border)}
 .update-card:last-of-type{border-bottom:none}
-.update-card h3{font-family:'Libre Baskerville',serif;font-size:1.15rem;margin-bottom:10px;color:var(--green)}
-.update-card p{font-size:.92rem;color:var(--text-md);font-weight:300;line-height:1.8;max-width:680px}
-.photo-note{background:var(--gold-pale);border:1px dashed var(--gold);border-radius:6px;padding:16px 20px;margin-top:30px;font-size:.85rem;color:var(--text-md)}
+.update-card h3{font-family:'Libre Baskerville',serif;font-size:1.1rem;margin-bottom:10px;color:var(--green)}
+.update-card p{font-size:.92rem;color:var(--text-md);font-weight:300;line-height:1.75;max-width:680px}
+.photo-note{background:var(--gold-pale);border:1px dashed var(--gold);border-radius:6px;padding:16px 20px;margin-top:26px;font-size:.85rem;color:var(--text-md)}
 </style>
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" id="mainNav">
  <a class="nav-brand" href="index.html">
   <img class="nav-logo-img logo-img" alt="Healthy Earth Foundation Logo">
   <div>
@@ -111,52 +119,69 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
   <li><a href="index.html">Home</a></li>
   <li><a href="about.html" >About</a></li>
   <li><a href="programs.html" >Programs</a></li>
+  <li><a href="index.html#gallery">Our Work</a></li>
   <li><a href="impact.html" class="active">Impact</a></li>
   <li><a href="index.html#partners">Partners</a></li>
   <li><a href="index.html#contact">Contact</a></li>
  </ul>
  <button class="nav-btn" onclick="window.location.href='donate.html'">Donate Now</button>
+ <div class="burger" onclick="toggleMob()" role="button" tabindex="0" aria-label="Toggle navigation menu"><span></span><span></span><span></span></div>
 </nav>
+<div class="mob" id="mobMenu">
+ <a href="index.html" onclick="closeMob()">Home</a>
+ <a href="about.html" onclick="closeMob()">About</a>
+ <a href="programs.html" onclick="closeMob()">Programs</a>
+ <a href="index.html#gallery" onclick="closeMob()">Our Work</a>
+ <a href="impact.html" onclick="closeMob()">Impact</a>
+ <a href="index.html#partners" onclick="closeMob()">Partners</a>
+ <a href="index.html#contact" onclick="closeMob()">Contact</a>
+ <a href="donate.html" onclick="closeMob()" style="color:var(--gold);font-weight:600">Donate Now &rarr;</a>
+</div>
+<script>
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open')}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
+window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('shadow',scrollY>60));
+</script>
 
 
 <div class="page-hero">
  <div class="page-hero-inner">
   <span class="eyebrow">Our Impact</span>
   <h1>Real work, told honestly.</h1>
-  <p>As our programs grow, this is where we'll keep an honest record of what we've actually done together with the villages we work in.</p>
+  <p>An ongoing record of what we've actually done together with the villages we work in.</p>
  </div>
 </div>
 
 <section class="sec">
  <div class="wrap">
- <span class="eyebrow">Community Initiatives &amp; Milestones</span>
- <p class="sb">Every entry here reflects something we did with a community, not just for one. That distinction matters to us.</p>
+ <h2 class="sh">Community Initiatives &amp; Milestones</h2>
+ <p class="sb">Every entry here reflects something done with a community, not just for one. That distinction matters to us.</p>
 
  <div class="update-card">
   <h3>Plantation Drive: Hasanpur Kalan Village</h3>
-  <p>We brought together residents of Hasanpur Kalan for a community plantation drive aimed at restoring green space and building lasting awareness around trees, biodiversity, and sustainable living. The trees are still there. So is the conversation we started.</p>
+  <p>Residents of Hasanpur Kalan came together for a plantation drive aimed at restoring green space and building lasting awareness around trees, biodiversity, and sustainable living. The trees are still there. So is the conversation it started.</p>
  </div>
 
  <div class="update-card">
   <h3>Cleanliness &amp; Hygiene Awareness Program</h3>
-  <p>We ran a campaign focused on better sanitation habits, personal hygiene, and waste management, with the goal of sparking action the community could keep going on its own long after we left.</p>
+  <p>A campaign focused on better sanitation habits, personal hygiene, and waste management, aimed at sparking action a community could keep going long after we left.</p>
  </div>
 
  <div class="update-card">
   <h3>Skill Development &amp; Women's Empowerment Initiatives</h3>
-  <p>We're helping build real opportunity in these villages through skill development, with particular focus on women's independence and livelihoods that don't depend on outside support.</p>
+  <p>Building real opportunity through skill development, with particular focus on women's independence and livelihoods that don't depend on outside support.</p>
  </div>
 
  <div class="update-card">
   <h3>Clean Energy &amp; Pollution Awareness Campaigns</h3>
-  <p>We're pushing for cleaner fuels and speaking plainly about the harm of burning plastics, waste, and wood in the open. That means working directly with communities, and with local industries and stakeholders too, to protect the air people actually breathe.</p>
+  <p>Pushing for cleaner fuels and speaking plainly about the harm of burning plastics, waste, and wood in the open, working directly with communities and local industries to protect the air people actually breathe.</p>
  </div>
 
  <div class="photo-note">
   &#128247; Photos from these initiatives will be added here soon.
  </div>
 
- <div style="margin-top:50px">
+ <div style="margin-top:44px">
   <a href="donate.html" class="btn-primary">Support Our Work</a>
  </div>
  </div>
@@ -179,11 +204,12 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
    <li><a href="donate.html">Donate</a></li>
   </ul></div>
   <div class="ft-col"><h5>Our Work</h5><ul>
-   <li><a href="programs.html#education">Girl Child Education</a></li>
-   <li><a href="programs.html#women">Women's Empowerment</a></li>
-   <li><a href="programs.html#skills">Skill Development</a></li>
-   <li><a href="programs.html#environment">Tree Plantation</a></li>
-   <li><a href="programs.html#sanitation">Sanitation &amp; Hygiene</a></li>
+   <li><a href="programs.html#environment">Environment and Climate</a></li>
+   <li><a href="programs.html#education">Education</a></li>
+   <li><a href="programs.html#women">Women Empowerment</a></li>
+   <li><a href="programs.html#health">Health and Nutrition</a></li>
+   <li><a href="programs.html#water">Water and Agriculture</a></li>
+   <li><a href="programs.html#research">Research and Innovation</a></li>
   </ul></div>
   <div class="ft-col"><h5>Contact Us</h5><ul>
    <li><a href="mailto:healthyearthfoundation.india@gmail.com">Email Us</a></li>
