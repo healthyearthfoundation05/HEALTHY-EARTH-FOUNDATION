@@ -701,9 +701,8 @@ body.mob-open .wa-btn,body.mob-open .btt-btn{display:none!important}
 .btn-primary:hover{background:var(--gold-lt);transform:translateY(-2px)}
 .btn-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:clamp(13px,2vw,16px) clamp(28px,3.5vw,44px);border-radius:3px;font-family:'Outfit',sans-serif;font-size:clamp(.8rem,1.3vw,.9rem);font-weight:400;cursor:pointer;transition:all .3s}
 .btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.hero-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,.15);background:rgba(18,52,32,.82);backdrop-filter:blur(12px)}
+.hero-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.15);background:rgba(18,52,32,.82);backdrop-filter:blur(12px)}
 @media(max-width:760px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:420px){.hero-stats{grid-template-columns:1fr}}
 .hstat{padding:clamp(20px,3vw,32px) clamp(20px,3.5vw,48px);border-right:1px solid rgba(255,255,255,.1);text-align:center}
 .hstat:last-child{border-right:none}
 .hstat-num{font-family:'Libre Baskerville',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;color:var(--gold-lt);display:block;line-height:1}
@@ -1502,7 +1501,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 <!-- NAV -->
 <nav class="nav" id="mainNav">
  <a class="nav-brand" href="index.html">
- <img class="nav-logo-img logo-img" alt="Healthy Earth Foundation Logo" loading="eager" fetchpriority="high">
+ <img class="nav-logo-img logo-img" alt="Healthy Earth Foundation Logo" loading="eager" fetchpriority="high" src="/logo.jpg" onerror="this.style.display='none'">
  <div>
  <div class="nav-name">Healthy Earth Foundation</div>
  <div class="nav-since">For Rural India</div>
@@ -1553,7 +1552,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <div style="position:relative;width:clamp(320px,38vw,480px);height:clamp(320px,38vw,480px);margin:0 auto">
   <!-- Large central logo -->
   <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52%;height:52%;border-radius:50%;background:rgba(255,255,255,.14);border:3px solid rgba(255,255,255,.35);box-shadow:0 0 70px rgba(200,146,10,.25);display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:2">
-   <img class="logo-img" alt="Healthy Earth Foundation" loading="eager" fetchpriority="high" style="width:96%;height:96%;object-fit:cover;border-radius:50%">
+   <img class="logo-img" alt="Healthy Earth Foundation" loading="eager" fetchpriority="high" style="width:96%;height:96%;object-fit:cover;border-radius:50%" src="/logo.jpg" onerror="this.style.display='none'">
   </div>
 
   <!-- 6 pillar badges at precise hexagon points (60 degrees apart) -->
@@ -1587,7 +1586,6 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 <!-- Stats bar -->
  <div class="hero-stats">
  <div class="hstat rev"><span class="hstat-num"><span class="count" data-target="9">0</span></span><span class="hstat-lbl">Focus Sectors</span></div>
- <div class="hstat rev"><span class="hstat-num"><span class="count" data-target="100">0</span>%</span><span class="hstat-lbl">Non-Profit</span></div>
  <div class="hstat rev"><span class="hstat-num"><span class="count" data-target="7">0</span>+</span><span class="hstat-lbl">Partner Types</span></div>
  <div class="hstat rev"><span class="hstat-num"><span class="count" data-target="500">0</span>+</span><span class="hstat-lbl">Lives Impacted</span></div>
  <div class="hstat rev"><span class="hstat-num"><span class="count" data-target="12">0</span>+</span><span class="hstat-lbl">Active Projects</span></div>
@@ -1667,7 +1665,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <div style="max-width:780px;margin:0 auto clamp(40px,6vw,64px);background:var(--cream);border:1px solid var(--border);border-radius:8px;padding:clamp(28px,4vw,48px);border-top:3px solid var(--green);text-align:center" class="rev">
  <!-- Avatar — logo only, circular, no initials -->
  <div style="width:clamp(100px,14vw,130px);height:clamp(100px,14vw,130px);border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 28px rgba(27,94,59,.22);overflow:hidden;border:3px solid rgba(200,146,10,.25)">
- <img class="logo-img" alt="HEF" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+ <img class="logo-img" alt="HEF" style="width:100%;height:100%;object-fit:cover;border-radius:50%" src="/logo.jpg" onerror="this.style.display='none'">
  </div>
  <div style="font-family:'Libre Baskerville',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:var(--green);margin-bottom:4px">Our Founders</div>
  
@@ -1759,7 +1757,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <div class="wrap">
  <div class="why-g">
  <div class="rev">
- <div class="why-logo-f"><img class="logo-img" alt="HEF"></div>
+ <div class="why-logo-f"><img class="logo-img" alt="HEF" src="/logo.jpg" onerror="this.style.display='none'"></div>
  <div class="sec-accent"></div>
  <span class="eyebrow">Why Choose Us</span>
  <h2 class="sh">Science-Backed,<br>Community-Led</h2>
@@ -1820,7 +1818,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  </ul>
  </div>
  <div class="commit-aside rev">
- <div class="commit-logo"><img class="logo-img" alt="HEF"></div>
+ <div class="commit-logo"><img class="logo-img" alt="HEF" src="/logo.jpg" onerror="this.style.display='none'"></div>
  <div class="commit-q">
  <blockquote>"We do not measure our success by what we announce. We measure it by what endures in the village long after we have left."</blockquote>
  <cite>Healthy Earth Foundation</cite>
@@ -1853,7 +1851,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 <!-- CTA -->
 <section class="sec cta-sec" id="contact">
  <div class="wrap">
- <div class="cta-logo"><img class="logo-img" alt="HEF"></div>
+ <div class="cta-logo"><img class="logo-img" alt="HEF" src="/logo.jpg" onerror="this.style.display='none'"></div>
  <h2 class="sh sh-w rev" style="margin-bottom:clamp(12px,2vw,18px)">Be Part of Something<br><em style="font-style:italic;color:var(--gold-lt)">That Truly Matters</em></h2>
  <p class="cta-p rev">Whether you donate, volunteer, or partner with us, your involvement changes a child's life, empowers a rural woman, plants a tree, and heals the Earth.</p>
  <div class="cta-btns rev" style="margin-bottom:clamp(24px,4vw,44px)">
@@ -1891,7 +1889,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <div class="ft-g">
  <div>
  <div class="ft-brand">
- <div class="ft-logo"><img class="logo-img" alt="HEF"></div>
+ <div class="ft-logo"><img class="logo-img" alt="HEF" src="/logo.jpg" onerror="this.style.display='none'"></div>
  <div><div class="ft-name">Healthy Earth Foundation</div><div class="ft-sub">Committed to Rural India &middot; Non-Profit</div></div>
  </div>
  <p class="ft-desc">A non-profit committed to rural women's upliftment, child welfare, girl child education, environmental conservation, and sustainable community development across rural India.</p>
@@ -1926,7 +1924,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 <div class="modal-ov" id="modal" onclick="handleOv(event)">
  <div class="modal">
  <button class="modal-x" onclick="closeModal()">&#x2715;</button>
- <div class="modal-logo"><img class="logo-img" alt="HEF"></div>
+ <div class="modal-logo"><img class="logo-img" alt="HEF" src="/logo.jpg" onerror="this.style.display='none'"></div>
  <h3>Join Our Mission</h3>
  <p class="modal-sub">Every contribution matters. Choose how you'd like to make a difference with Healthy Earth Foundation.</p>
  <div class="modal-opts">
