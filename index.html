@@ -1672,7 +1672,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <div style="max-width:780px;margin:0 auto clamp(40px,6vw,64px);background:var(--cream);border:1px solid var(--border);border-radius:8px;padding:clamp(28px,4vw,48px);border-top:3px solid var(--green);text-align:center" class="rev">
  <!-- Avatar — logo only, circular, no initials -->
  <div style="width:clamp(100px,14vw,130px);height:clamp(100px,14vw,130px);border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 28px rgba(27,94,59,.22);overflow:hidden;border:3px solid rgba(200,146,10,.25)">
- <img class="logo-img" src="logo.png?v=6" alt="HEF" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+ <img class="logo-img" src="logo.png?v=6" alt="HEF" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
  </div>
  <div style="font-family:'Libre Baskerville',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:var(--green);margin-bottom:4px">Our Founders</div>
  
@@ -1760,7 +1760,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  </svg>
  <!-- Center logo -->
  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38%;height:38%;background:#fffdf7;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.12);padding:8%">
- <img src="logo.png?v=6" alt="Healthy Earth Foundation" style="width:100%;height:100%;object-fit:contain">
+ <img src="logo.png?v=6" alt="Healthy Earth Foundation" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain">
  </div>
  <!-- Icon badges on the ring -->
  <div style="position:absolute;left:50%;top:12%;transform:translate(-50%,-50%);width:15%;aspect-ratio:1;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:clamp(1.1rem,3vw,1.5rem);box-shadow:0 3px 10px rgba(0,0,0,.15)">🌍</div>
@@ -1787,7 +1787,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <div class="wrap">
  <div class="why-g">
  <div class="rev">
- <div class="why-logo-f"><img class="logo-img" src="logo.png?v=6" alt="HEF"></div>
+ <div class="why-logo-f"><img class="logo-img" src="logo.png?v=6" alt="HEF" loading="lazy" decoding="async"></div>
  <div class="sec-accent"></div>
  <span class="eyebrow">Why Choose Us</span>
  <h2 class="sh">Science-Backed,<br>Community-Led</h2>
@@ -1848,7 +1848,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  </ul>
  </div>
  <div class="commit-aside rev">
- <div class="commit-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF"></div>
+ <div class="commit-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF" loading="lazy" decoding="async"></div>
  <div class="commit-q">
  <blockquote>"We do not measure our success by what we announce. We measure it by what endures in the village long after we have left."</blockquote>
  <cite>Healthy Earth Foundation</cite>
@@ -1881,7 +1881,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 <!-- CTA -->
 <section class="sec cta-sec" id="contact">
  <div class="wrap">
- <div class="cta-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF"></div>
+ <div class="cta-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF" loading="lazy" decoding="async"></div>
  <h2 class="sh sh-w rev" style="margin-bottom:clamp(12px,2vw,18px)">Be Part of Something<br><em style="font-style:italic;color:var(--gold-lt)">That Truly Matters</em></h2>
  <p class="cta-p rev">Whether you donate, volunteer, or partner with us, your involvement changes a child's life, empowers a rural woman, plants a tree, and heals the Earth.</p>
  <div class="cta-btns rev" style="margin-bottom:clamp(24px,4vw,44px)">
@@ -1893,11 +1893,11 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <p class="cf-sub">We read every message and respond within 48 hours.</p>
  <form id="cfForm" onsubmit="submitCF(event)">
  <div class="cf-grid">
- <div><label class="cf-label">Your Name *</label><input class="cf-input" type="text" name="uname" placeholder="e.g. Ratan Tata" required></div>
- <div><label class="cf-label">Email Address *</label><input class="cf-input" type="email" name="uemail" placeholder="your@email.com" required></div>
- <div><label class="cf-label">Phone Number</label><input class="cf-input" type="tel" name="uphone" placeholder="+91 XXXXX XXXXX"></div>
- <div><label class="cf-label">I want to</label>
- <select class="cf-select" name="upurpose">
+ <div><label class="cf-label" for="cf-uname">Your Name *</label><input class="cf-input" id="cf-uname" type="text" name="uname" placeholder="e.g. Ratan Tata" required></div>
+ <div><label class="cf-label" for="cf-uemail">Email Address *</label><input class="cf-input" id="cf-uemail" type="email" name="uemail" placeholder="your@email.com" required></div>
+ <div><label class="cf-label" for="cf-uphone">Phone Number</label><input class="cf-input" id="cf-uphone" type="tel" name="uphone" placeholder="+91 XXXXX XXXXX"></div>
+ <div><label class="cf-label" for="cf-upurpose">I want to</label>
+ <select class="cf-select" id="cf-upurpose" name="upurpose">
  <option value="Donation">Make a Donation</option>
  <option value="Volunteer">Volunteer</option>
  <option value="Partnership">Partner With Us</option>
@@ -1905,7 +1905,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <option value="General Inquiry">General Inquiry</option>
  </select>
  </div>
- <div class="cf-full"><label class="cf-label">Your Message *</label><textarea class="cf-textarea" name="umsg" placeholder="Tell us how you would like to get involved, or any questions you have..." required></textarea></div>
+ <div class="cf-full"><label class="cf-label" for="cf-umsg">Your Message *</label><textarea class="cf-textarea" id="cf-umsg" name="umsg" placeholder="Tell us how you would like to get involved, or any questions you have..." required></textarea></div>
  </div>
  <button type="submit" class="cf-btn">Send Message &rarr;</button>
  <div class="cf-ok" id="cfOk">&#x2705; Thank you! Your message is being sent. We will get back to you within 48 hours.</div>
@@ -1919,7 +1919,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
  <div class="ft-g">
  <div>
  <div class="ft-brand">
- <div class="ft-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF"></div>
+ <div class="ft-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF" loading="lazy" decoding="async"></div>
  <div><div class="ft-name">Healthy Earth Foundation</div><div class="ft-sub">Committed to Rural India &middot; Non-Profit</div></div>
  </div>
  <p class="ft-desc">A non-profit committed to rural women's upliftment, child welfare, girl child education, environmental conservation, and sustainable community development across rural India.</p>
@@ -1953,7 +1953,7 @@ footer{background:#0D1F14;padding:clamp(48px,7vw,72px) clamp(20px,5vw,80px) clam
 <div class="modal-ov" id="modal" onclick="handleOv(event)">
  <div class="modal">
  <button class="modal-x" onclick="closeModal()">&#x2715;</button>
- <div class="modal-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF"></div>
+ <div class="modal-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF" loading="lazy" decoding="async"></div>
  <h3>Join Our Mission</h3>
  <p class="modal-sub">Every contribution matters. Choose how you'd like to make a difference with Healthy Earth Foundation.</p>
  <div class="modal-opts">
@@ -2075,7 +2075,7 @@ function proceedDonate(){
 </script>
 
 <!-- WhatsApp Float -->
-<a class="wa-btn" href="https://wa.me/918006800347?text=Hello%20Healthy%20Earth%20Foundation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20work." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">&#x1F4AC;</a>
+<a class="wa-btn" href="https://wa.me/919927187878?text=Hello%20Healthy%20Earth%20Foundation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20work." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">&#x1F4AC;</a>
 
 <!-- Back to Top -->
 <button class="btt-btn" id="bttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" title="Back to top">&#x2191;</button>
@@ -2085,7 +2085,7 @@ function proceedDonate(){
 <div class="donate-ov" id="donateModal" onclick="handleDonateOv(event)">
  <div class="donate-box">
  <button class="donate-x" onclick="closeDonate()">&#x2715;</button>
- <div class="donate-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+ <div class="donate-logo"><img class="logo-img" src="logo.png?v=6" alt="HEF Logo" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
  <h3>Support Our Mission</h3>
  <p class="donate-sub">Every rupee you give goes directly to village schools, rural women's upliftment, child nutrition, and tree plantation drives across Western Uttar Pradesh.</p>
 
@@ -2107,7 +2107,7 @@ function proceedDonate(){
 
  <!-- Custom amount -->
  <div class="donate-custom">
- <label>Or enter custom amount (&#x20B9;)</label>
+ <label for="customAmt">Or enter custom amount (&#x20B9;)</label>
  <input type="number" id="customAmt" placeholder="e.g. 3000" min="1000" step="1000" oninput="clearChips()">
  </div>
 
